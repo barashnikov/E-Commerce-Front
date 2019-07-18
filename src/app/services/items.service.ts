@@ -10,7 +10,7 @@ import { Item } from '../domain/item';
   providedIn: 'root'
 })
 export class ItemsService {
-  URL: string = 'localhost:8080/items';
+  URL: string = 'http://localhost:8080/items';
   constructor(private client: HttpClient) { }
 
   public getAllItem(): Observable<Item[]> {
