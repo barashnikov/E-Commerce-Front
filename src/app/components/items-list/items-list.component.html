@@ -4,21 +4,37 @@
   </div>
   <div class="card-body">
 <table class="table">
-  <thead>
+  <!-- <thead>
     <tr>
       <th>itemName</th>
       <th>price</th>
       <th>picture</th>
     </tr>
-  </thead>
+  </thead> -->
   <tbody>
-    <tr *ngFor="let item of data">
+      <div class="row">
+          <div class="card align-items-center" style="width:400px; margin: 5px"
+          *ngFor='let item of data'>
+          <img class="card-img-top center"
+          [src]='item.picture' [title]='item.itemName'
+          [style.width.px]='"200"' [style.height.px]='"200"'
+          [style.margin.px]='50'>
+          <div class="card-body text-center">
+          <h4 class="card-title">{{ item.itemName }}</h4>
+
+          <h2 class="card-text">{{ item.price |
+          currency:'EUR':'symbol':'1.2-2'}}</h2>
+          <a class="btn btn-primary" [routerLink]="['/details',item.id]" routerLinkActive="router-link-active" > Show Details </a>
+          </div>
+          </div>
+          </div>
+    <!-- <tr *ngFor="let item of data">
       <td>{{item.itemName}}</td>
       <td>{{item.price}}</td>
       <td ><img [src]= item.picture
                 [width]= width
                ></td>
-    </tr>
+    </tr> -->
 
   </tbody>
 </table>

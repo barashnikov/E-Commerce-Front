@@ -1,3 +1,4 @@
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ItemsListComponent } from './components/items-list/items-list.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -8,7 +9,9 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
    {path : '' , component : WelcomeComponent, pathMatch : 'full' },
    {path : 'list', component : ItemsListComponent},
+   {path : 'details/:id', component : ItemDetailsComponent},
    {path : '**', component : NotFoundComponent}
+
 
 ];
 
