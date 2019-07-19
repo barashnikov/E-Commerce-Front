@@ -8,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./items-list.component.scss']
 })
 export class ItemsListComponent implements OnInit {
-  data : Item[];
+  data: Item[];
+  width = 200;
   constructor(private service: ItemsService) { }
 
   ngOnInit() {
       this.service.getAllItem().subscribe(
-        resp=>this.data = resp,
-        erreur => console.log('Attention, il y a eu erreur' +erreur));
+        resp => this.data = resp,
+        erreur => console.log('Attention, il y a eu erreur' + erreur));
   }
 
 }
