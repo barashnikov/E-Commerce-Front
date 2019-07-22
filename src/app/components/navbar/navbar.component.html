@@ -25,13 +25,13 @@
     id="collapsibleNavId"
     [ngbCollapse]="isCollapsed"
   >
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    <ul class="nav nav-tabs mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
         <a
           class="nav-link"
           [routerLink]="['/']"
           routerLinkActive="router-link-active"
-          style="font-size: 3.5em;"
+          style="font-size: 2em;"
 
           >Home <span class="sr-only">(current)</span></a
         >
@@ -41,14 +41,46 @@
           class="nav-link"
           [routerLink]="['/list']"
           routerLinkActive="router-link-active"
-          style="font-size: 3.5em"
+          style="font-size: 2em"
           >Items</a
         >
+        <li class="nav-item">
+            <a
+              class="nav-link"
+              [routerLink]="['/list']"
+              routerLinkActive="router-link-active"
+              style="font-size: 2em"
+              >Login</a
+            >
+            &nbsp; &nbsp;
+            &nbsp; &nbsp;
+
       </li>
+      <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/cart']"
+            routerLinkActive="router-link-active"
+            style="font-size: 1em"
+            ><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i
+              >
+            </a
+          >
+
+    </li>
+    <li class="nav-item">
+        <a class
+          style="font-size: 1em"
+          > <span class="badge badge-success">{{ cartLenght }}</span>
+          </a
+        >
+
+
+  </li>
+
+
     </ul>
-    <div>Login</div>
-    &nbsp; &nbsp;
-    <div>
+
+
+    <!-- <div>
       <a class="nav-link" [routerLink]="['/cart']">
         <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i
       ></a>
@@ -58,7 +90,7 @@
       <a class="nav-link" [routerLink]="['/cart']">
         <span class="badge badge-success">{{ cartLenght }}</span></a
       >
-    </div>
-    &nbsp; &nbsp;
+    </div> -->
+
   </div>
 </nav>
