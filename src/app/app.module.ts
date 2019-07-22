@@ -10,6 +10,8 @@ import { ItemsListComponent } from './components/items-list/items-list.component
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
+import { CartComponent } from './components/cart/cart.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
     ItemsListComponent,
     WelcomeComponent,
     NotFoundComponent,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    CartComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

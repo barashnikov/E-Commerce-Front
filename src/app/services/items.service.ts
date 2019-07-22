@@ -10,6 +10,7 @@ import { Item } from '../domain/item';
   providedIn: 'root'
 })
 export class ItemsService {
+  // tslint:disable-next-line: no-inferrable-types
   URL: string = 'http://localhost:8080/items';
   constructor(private client: HttpClient) { }
 
@@ -17,4 +18,7 @@ export class ItemsService {
     return this.client.get<Item[]>(this.URL);
 
   }
+  public getItemById(id: string): Observable<Item> {
+    return this.client.get<Item>(this.URL + '/' + id);
+    }
 }

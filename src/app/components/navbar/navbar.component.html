@@ -1,22 +1,64 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" [routerLink]="['/']" routerLinkActive="router-link-active" >E-commerce</a>
-  <button (click)="isCollapsed = !isCollapsed;" class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-      aria-expanded="false" aria-label="Toggle navigation">
+  <a
+    class="navbar-brand"
+    [routerLink]="['/']"
+    routerLinkActive="router-link-active"
+
+    >
+    <img src="./assets/img/logo.jpg" style="width:11em">
+    </a
+  >
+  <button
+    (click)="isCollapsed = !isCollapsed"
+    class="navbar-toggler d-lg-none"
+    type="button"
+    data-toggle="collapse"
+    data-target="#collapsibleNavId"
+    aria-controls="collapsibleNavId"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavId" [ngbCollapse]="isCollapsed">
+  <div
+    class="collapse navbar-collapse"
+    id="collapsibleNavId"
+    [ngbCollapse]="isCollapsed"
+  >
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/']" routerLinkActive="router-link-active" >Home <span class="sr-only">(current)</span></a>
+        <a
+          class="nav-link"
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+          style="font-size: 3.5em;"
+
+          >Home <span class="sr-only">(current)</span></a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/list']" routerLinkActive="router-link-active" >Items</a>
+        <a
+          class="nav-link"
+          [routerLink]="['/list']"
+          routerLinkActive="router-link-active"
+          style="font-size: 3.5em"
+          >Items</a
+        >
       </li>
-
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <div>Login</div>
+    &nbsp; &nbsp;
+    <div>
+      <a class="nav-link" [routerLink]="['/cart']">
+        <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i
+      ></a>
+    </div>
+    &nbsp; &nbsp;
+    <div>
+      <a class="nav-link" [routerLink]="['/cart']">
+        <span class="badge badge-success">{{ cartLenght }}</span></a
+      >
+    </div>
+    &nbsp; &nbsp;
   </div>
 </nav>
